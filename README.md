@@ -187,7 +187,7 @@ All keyboard shortcuts in [**sxhkdrc**](https://github.com/AlvinPix/bspwm/blob/m
 
 To install this desktop environment is very easy, first clone the repository, there will be the cloned repository folder.
 ```bash
-git clone https://github.com/AlvinPix/bspwm.git ; cd bspwm
+git clone https://github.com/ghuSet/bspwm.git ; cd bspwm
 ```
 
 Finally, chmod permissions to the files called **kali.sh** and **root.sh** and then run it.
@@ -201,7 +201,3 @@ Wait for the installation scripts to finish, once finished close section and sel
 - This environment has been inspired by the functionalities of [**S4vitar's**](https://github.com/s4vitar) environment.
 - Thanks to [**adi1090x**](https://github.com/adi1090x) for his contribution to creating polybar [cuts](https://github.com/adi1090x/polybar-themes#cuts).
 - Thanks to [**wallhaven**](https://wallhaven.cc/) for their incredible wallpapers, credits to their respective creators.
-
-## Support
-
-<a href="https://www.buymeacoffee.com/alvinpix" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
