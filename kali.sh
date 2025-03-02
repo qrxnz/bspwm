@@ -27,12 +27,12 @@ RUTE=$(pwd)
 # SCRIPT PRESENTATION
 banner () {
 echo -e "${White} ╔───────────────────────────────────────────────╗                 	"
-echo -e "${White} |${Cyan} ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗${White} |      "
-echo -e "${White} |${Cyan} ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║${White} |      "
-echo -e "${White} |${Cyan} ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║${White} |      "
-echo -e "${White} |${Cyan} ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║${White} |	"
-echo -e "${White} |${Cyan} ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║${White} |	"
-echo -e "${White} |${Cyan} ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝${White} |	"
+echo -e "${White} |${Red} ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗${White} |      "
+echo -e "${White} |${Red} ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║${White} |      "
+echo -e "${White} |${Red} ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║${White} |      "
+echo -e "${White} |${Red} ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║${White} |	"
+echo -e "${White} |${Red} ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║${White} |	"
+echo -e "${White} |${Red} ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝${White} |	"
 echo -e "${White} ┖───────────────────────────────────────────────┙			"
 echo ""
 echo -e "${White} [${Blue}i${White}] BSPWM | Hacker environment automation script."
@@ -180,33 +180,33 @@ if [ $quest = Y ]; then
                 sudo rm -rf ${LOCALPATH}/.config/picom
                 cp -r picom ${LOCALPATH}/.config/picom
 		echo ""
-		echo -e "${White} [${Blue}i${White}] Step 5 check if the neofetch is installed"
-		sleep 2
-	fi
-	if which neofetch >/dev/null; then
-		echo ""
-		echo -e "${White} [${Blue}+${White}] NEOFETCH is installed, installing configuration"
-		sleep 2
-		cd ${RUTE}/.config
-		sudo rm -rf ${LOCALPATH}/.config/neofetch
-                cp -r neofetch ${LOCALPATH}/.config/neofetch
-	else
-		echo ""
-		echo -e "${White} [${Red}-${White}] NEOFETCH is not installed, installing neofetch"
-		sleep 2
-		echo ""
-		sudo apt update
-		echo ""
-		sudo apt install neofetch -y
-		echo ""
-		echo -e "${White} [${Blue}+${White}] NEOFETCH is installed, installing configuration"
-		sleep 2
-		cd ${RUTE}/.config
-		sudo rm -rf ${LOCALPATH}/.config/neofetch
-                cp -r neofetch ${LOCALPATH}/.config/neofetch
-                echo ""
-                echo -e "${White} [${Blue}i${White}] Step 6 check if the ranger is installed"
-                sleep 2
+#		echo -e "${White} [${Blue}i${White}] Step 5 check if the neofetch is installed"
+#		sleep 2
+#	fi
+#	if which neofetch >/dev/null; then
+#		echo ""
+#		echo -e "${White} [${Blue}+${White}] NEOFETCH is installed, installing configuration"
+#		sleep 2
+#		cd ${RUTE}/.config
+#		sudo rm -rf ${LOCALPATH}/.config/neofetch
+#                cp -r neofetch ${LOCALPATH}/.config/neofetch
+#	else
+#		echo ""
+#		echo -e "${White} [${Red}-${White}] NEOFETCH is not installed, installing neofetch"
+#		sleep 2
+#		echo ""
+#		sudo apt update
+#		echo ""
+#		sudo apt install neofetch -y
+#		echo ""
+#		echo -e "${White} [${Blue}+${White}] NEOFETCH is installed, installing configuration"
+#		sleep 2
+#		cd ${RUTE}/.config
+#		sudo rm -rf ${LOCALPATH}/.config/neofetch
+#                cp -r neofetch ${LOCALPATH}/.config/neofetch
+#                echo ""
+#                echo -e "${White} [${Blue}i${White}] Step 6 check if the ranger is installed"
+#                sleep 2
 	fi
 	if which ranger >/dev/null; then
 		echo ""
@@ -404,13 +404,6 @@ if [ $quest = Y ]; then
 		~/.fzf/install
 		echo ""
 		cd ${LOCALPATH}/scripts ; git clone https://github.com/pipeseroni/pipes.sh.git
-		echo ""
-		echo -e "${White} [${Blue}i${White}] Step 13 clone ghostscript and falcón repositories"
-		sleep 2
-		echo ""
-		#cd ${LOCALPATH}/scripts ; git clone https://github.com/AlvinPix/Ghost-script.git
-		echo ""
-		#cd ${LOCALPATH}/scripts ; git clone https://github.com/AlvinPix/Falcon.git
 		echo ""
 fi
 }
