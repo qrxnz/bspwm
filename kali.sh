@@ -64,7 +64,7 @@ banner
 sleep 1
 echo -ne "${White} [${Blue}!${White}] Do you want to continue with the installation? Y|N ▶ ${Red}"
 read quest
-if [ $quest = Y ]; then
+if [ "$quest" == Y ]; then
 	echo ""
 	echo -e "${White} [${Blue}i${White}] Step 1 checking if bspwm and sxhkd are installed"
 	sleep 2
@@ -180,6 +180,7 @@ if [ $quest = Y ]; then
                 sudo rm -rf ${LOCALPATH}/.config/picom
                 cp -r picom ${LOCALPATH}/.config/picom
 		echo ""
+    fi
 #		echo -e "${White} [${Blue}i${White}] Step 5 check if the neofetch is installed"
 #		sleep 2
 #	fi
