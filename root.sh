@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Author: Enríquez González https://github.com/AlvinPix
-# instagram: @alvinpx_271
-# facebook: @alvin.gonzalez.13139
-
-# VARIABLE DATABASE AND OTHER THINGS
+# VARIABLE DATABASE AND OTHER THINGS.
 RUTE=$(pwd)
 
 # COLOR USE THE SCRIPT
@@ -22,7 +18,7 @@ white='\033[0;37m'
 lred='\033[0;31m'
 IWhite="\[\033[0;97m\]"
 
-# CHECK ROOT USER
+# CHECK ROOT USER.
 if [ $(id -u) -ne 0 ]; then
 	echo ""
 	echo -e "${White} [${Blue}i${White}] You must be root user to run the script"
@@ -51,6 +47,6 @@ cd /root/scripts ; git clone https://github.com/pipeseroni/pipes.sh.git
 echo ""
 }
 
-# CALLS
+# CALLS.
 reset
 install_addons

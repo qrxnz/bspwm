@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Author: Enríquez González https://github.com/AlvinPix
-# instagram: @alvinpx_271
-# facebook: @alvin.gonzalez.13139
-
-# COLORS THE SCRIPT
+# COLORS THE SCRIPT.
 Black='\033[1;30m'
 Red='\033[1;31m'
 Green='\033[1;32m'
@@ -27,16 +23,16 @@ echo -e "${Cyan} [i]${White} Exiting the script"
 exit 1
 }
 
-# USERNAME
+# USERNAME.
 user=$(whoami)
 
-# HOST DISCOVERY
+# HOST DISCOVERY.
 lanip=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/')
 lanip6=$(ip addr | grep 'state UP' -A4 | tail -n1 | awk '{print $2}' | cut -f1 -d'/')
 publicip=$(dig +short myip.opendns.com @resolver1.opendns.com)
 hostn=$(host "$publicip" | awk '{print $5}' | sed 's/.$//')
 
-# BANNER PRESENT THE SCRIPT
+# BANNER PRESENT THE SCRIPT.
 banner () {
 echo -e "${White} ╔──────────────────────────╗									"
 echo -e "${White} |${Purple} ██╗    ██╗██╗███████╗██╗${White} |${Red} [ ]${White} ${lanip}			"
@@ -123,6 +119,6 @@ else
 fi
 }
 
-# CALL WIFI AND RESET
+# CALL WIFI AND RESET.
 reset
 wifi

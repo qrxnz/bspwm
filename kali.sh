@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# COLOR USE THE SCRIPT
+# COLOR USE THE SCRIPT.
 Black='\033[1;30m'
 Red='\033[1;31m'
 Green='\033[1;32m'
@@ -15,7 +15,7 @@ white='\033[0;37m'
 lred='\033[0;31m'
 IWhite="\[\033[0;97m\]"
 
-# VARIABLE DATABASE AND OTHER THINGS
+# VARIABLE DATABASE AND OTHER THINGS.
 USERNAME=$(whoami)
 LOCALPATH="/home/${USERNAME}"
 KERNEL=$(uname -r)
@@ -24,7 +24,7 @@ HOST=$(uname -n)
 BIT=$(uname -m)
 RUTE=$(pwd)
 
-# SCRIPT PRESENTATION
+# SCRIPT PRESENTATION.
 banner () {
 echo -e "${White} ╔───────────────────────────────────────────────╗                 	"
 echo -e "${White} |${Red} ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗${White} |      "
@@ -36,7 +36,7 @@ echo -e "${White} |${Red} ╚═════╝ ╚══════╝╚═�
 echo -e "${White} ┖───────────────────────────────────────────────┙			"
 echo ""
 echo -e "${White} [${Blue}i${White}] BSPWM | Hacker environment automation script."
-echo -e "${White} [${Blue}i${White}] Enríquez González (Aka. AlvinPix)"
+echo -e "${White} [${Blue}i${White}] Enríque González (Aka. Usergh0st)"
 echo ""
 echo -e "${White} [${Blue}i${White}] Installation will begin soon."
 echo ""
@@ -44,7 +44,7 @@ sleep 4
 echo -e "${White} [${Blue}i${White}] Hello ${Red}${USERNAME}${White}, This is the bspwm installation script for kali linux"
 }
 
-# INSTALLATION OF MISSING DEPENDENCIES
+# INSTALLATION OF MISSING DEPENDENCIES.
 missing_dependencies () {
 echo ""
 echo -e "${White} [${Blue}i${White}] Step 9 installing missing dependencies"
@@ -56,7 +56,7 @@ sudo apt install scrub bat tty-clock openvpn feh pulseaudio-utils git lolcat -y
 echo ""
 }
 
-# INSTALL BSPWM KALI LINUX SETUP
+# INSTALL BSPWM KALI LINUX SETUP.
 setup () {
 clear
 echo ""
@@ -207,7 +207,7 @@ if [ $quest = Y ]; then
 #                echo ""
 #                echo -e "${White} [${Blue}i${White}] Step 6 check if the ranger is installed"
 #                sleep 2
-	fi
+#	fi
 	if which ranger >/dev/null; then
 		echo ""
 		echo -e "${White} [${Blue}+${White}] RANGER is installed, installing configuration"
@@ -263,8 +263,8 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Blue}+${White}] POLYBAR is installed, installing configuration"
 		sleep 2
 		cd ${RUTE}/.config
-                sudo rm -rf ${LOCALPATH}/.config/polybar
-                cp -r polybar ${LOCALPATH}/.config/polybar
+        sudo rm -rf ${LOCALPATH}/.config/polybar
+        cp -r polybar ${LOCALPATH}/.config/polybar
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/launch.sh
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/checkupdates
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/color-switch.sh
@@ -290,21 +290,21 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Blue}+${White}] POLYBAR is installed, installing configuration"
 		sleep 2
 		cd ${RUTE}/.config
-                sudo rm -rf ${LOCALPATH}/.config/polybar
-                cp -r polybar ${LOCALPATH}/.config/polybar
+        sudo rm -rf ${LOCALPATH}/.config/polybar
+        cp -r polybar ${LOCALPATH}/.config/polybar
 		chmod +x ${LOCALPATH}/.config/polybar/launch.sh
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/checkupdates
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/color-switch.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/colors-dark.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/colors-light.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/launcher.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/powermenu.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/pywal.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/random.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/script-manager.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/style-switch.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/styles.sh
-                chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/updates.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/color-switch.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/colors-dark.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/colors-light.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/launcher.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/powermenu.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/pywal.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/random.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/script-manager.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/style-switch.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/styles.sh
+        chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/updates.sh
 	fi
 		missing_dependencies
 		echo -e "${White} [${Blue}i${White}] Step 10 installing bspwm themes"
@@ -313,10 +313,10 @@ if [ $quest = Y ]; then
 		cp -r .themes ${LOCALPATH}
 		chmod +x ${LOCALPATH}/.themes/Camila/bspwmrc		#8
 		chmod +x ${LOCALPATH}/.themes/Esmeralda/bspwmrc		#7
-		chmod +x ${LOCALPATH}/.themes/Nami/bspwmrc		#6
-		chmod +x ${LOCALPATH}/.themes/Raven/bspwmrc		#5
-		chmod +x ${LOCALPATH}/.themes/Ryan/bspwmrc		#4
-		chmod +x ${LOCALPATH}/.themes/Simon/bspwmrc		#3
+		chmod +x ${LOCALPATH}/.themes/Nami/bspwmrc		    #6
+		chmod +x ${LOCALPATH}/.themes/Raven/bspwmrc		    #5
+		chmod +x ${LOCALPATH}/.themes/Ryan/bspwmrc		    #4
+		chmod +x ${LOCALPATH}/.themes/Simon/bspwmrc		    #3
 		chmod +x ${LOCALPATH}/.themes/Xavier/bspwmrc		#2
 		chmod +x ${LOCALPATH}/.themes/Zenitsu/bspwmrc		#1
 		echo ""
@@ -369,7 +369,6 @@ if [ $quest = Y ]; then
 		chmod +x ${LOCALPATH}/scripts/colorscript.sh
 		chmod +x ${LOCALPATH}/scripts/rezise.sh
 		chmod +x ${LOCALPATH}/scripts/updates.sh
-		#chmod +x ${LOCALPATH}/scripts/volume.sh
 		chmod +x ${LOCALPATH}/scripts/wifi.sh
 		chmod +x ${LOCALPATH}/scripts/wall-scripts/camila_wal.sh
 		chmod +x ${LOCALPATH}/scripts/wall-scripts/esmeralda_wal.sh
@@ -408,8 +407,6 @@ if [ $quest = Y ]; then
 fi
 }
 
-
-# CALLS THE SCRIPT
+# CALLS THE SCRIPT.
 reset
 setup
-

@@ -1,6 +1,6 @@
 # Get the size of the primary monitor (e.g. HDMI-1)
 monitor_size=$(xrandr | grep "primary" | awk '{print $4}')
-# Divide the size into width and height
+# The size into width and height
 width=$(echo $monitor_size | cut -d'x' -f1)
 height=$(echo $monitor_size | cut -d'x' -f2)
 # Calculate the coordinates to center the window on the monitor
