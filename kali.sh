@@ -266,6 +266,7 @@ if [ "$quest" == Y ]; then
 		cd ${RUTE}/.config
         sudo rm -rf ${LOCALPATH}/.config/polybar
         cp -r polybar ${LOCALPATH}/.config/polybar
+        chmod +x ${LOCALPATH}/.config/polybar/launch.sh
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/launch.sh
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/checkupdates
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/color-switch.sh
@@ -293,7 +294,8 @@ if [ "$quest" == Y ]; then
 		cd ${RUTE}/.config
         sudo rm -rf ${LOCALPATH}/.config/polybar
         cp -r polybar ${LOCALPATH}/.config/polybar
-		chmod +x ${LOCALPATH}/.config/polybar/launch.sh
+        chmod +x ${LOCALPATH}/.config/polybar/launch.sh
+		chmod +x ${LOCALPATH}/.config/polybar/cuts/launch.sh
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/checkupdates
         chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/color-switch.sh
         chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/colors-dark.sh
