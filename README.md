@@ -192,9 +192,18 @@ git clone --depth=1 https://github.com/Usergh0st/bspwm.git ; cd bspwm
 
 Finally, chmod permissions to the files called **kali.sh** and **root.sh** and then run it.
 ```bash
-chmod +x kali.sh root.sh ; ./kali.sh ; sudo ./root.sh
+chmod +x kali.sh root.sh ; ./kali.sh
 ```
+
+```bash
+sudo ./root.sh
+```
+
 Wait for the installation scripts to finish, once finished close section and select the new bspwm desktop.
+
+> [!Warnings] Warnings and uses
+> - Wait for the first script called "kali.sh" and "root.sh" to finish the installation correctly, at all times the user input must be in lowercase, not uppercase "y" instead of "Y"
+> - After executing the scripts, it is recommended to restart the machine.
 
 ## Credits
 
