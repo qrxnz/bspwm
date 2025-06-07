@@ -240,11 +240,6 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 fi
 
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -340,12 +335,176 @@ fi
 
 # My aliases
 
+#
+# Aliases & Scripts
+#
+
+# git
+alias gaa="git add ."
+alias gcm='git commit -m'
+alias gsu="git submodule update --remote"
+alias gsa="git submodule add"
+alias gpush="git push -u origin"
+alias gpull="git pull"
+alias grb='git rebase'
+alias grbc='git rebase --continue'
+alias gch='git checkout'
+alias grr='git review -R'
+alias gwl='git worktree list'
+
+# eza (modern ls replacement)
+alias ls="eza --icons"
+alias ll="eza -l --icons"
+alias l="eza -l -a --icons"
+
+alias tree="eza -l -a --icons --tree --ignore-glob='.git'"
+alias tre="eza -l -a --icons --tree --level 2 --ignore-glob='.git'"
+
+# bat (modern cat replacement)
+if command -v bat &> /dev/null; then
+  :
+else
+  alias bat="batcat"
+fi
+
+alias cat="bat -pp"
+alias less="bat --paging=always"
+
+# zoxide (modern cd replacement)
+alias cd="z"
+
+alias ..="z .."
+alias ...="z ../.."
+alias ....="z ../../.."
+alias .....="z ../../../.."
+alias ......="z ../../../../.."
+
+# kitty terminal
+alias icat="kitty +kitten icat"
+alias connect="kitty +kitten ssh"
+
+# neovim
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias nano="nvim"
+
+# vscodium
+alias vs="codium"
+alias vsc="codium ."
+
+# Nix
+alias x='nix run .'
+alias nd='nix develop'
+
+# direnv
+alias da='direnv allow'
+alias dda='direnv disallow'
+
+# hexyl (modern hexdump replacement)
+hexdump() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: path to file (options)"
+    else
+      hexyl "${@}"
+  fi
+}
+
+header() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: path to file (options)"
+    else
+      hexyl "${@}" | head -n 20
+  fi
+}
+
+# nmap
+nmap-default() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: nmap-default ip (options)"
+    else
+      [ ! -d "./nmap" ] && echo "[i] Creating $(pwd)/nmap..." && mkdir nmap
+      sudo nmap -sCV -T4 --min-rate 10000 "${@}" -v -oA nmap/tcp_default
+  fi
+}
+
+nmap-udp() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: nmap-udp ip (options)"
+    else
+      [ ! -d "./nmap" ] && echo "[i] Creating $(pwd)/nmap..." && mkdir nmap
+      sudo nmap -sUCV -T4 --min-rate 10000 "${@}" -v -oA nmap/udp_default
+  fi
+}
+
+# yt-dlp
+yt2wav() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: Enter a valid link (options)"
+    else
+      yt-dlp --extract-audio --audio-format wav "${@}"
+  fi
+}
+
+yt2mp3() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: Enter a valid link (options)"
+    else
+      yt-dlp --extract-audio --audio-format mp3 "${@}"
+  fi
+}
+
+yt2mp4() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: Enter a valid link (options)"
+    else
+      yt-dlp -S res,ext:mp4:m4a --recode mp4 "${@}"
+  fi
+}
+
+# mental issues
+alias lcs="clear"
+alias cleare ="clear"
+alias clea="clear"
+alias cear="clear"
+alias lcear="clear"
+alias clera="clear"
+alias celar="clear"
+alias cler="clear"
+alias claer="clear"
+alias clearc="clear"
+alias cleawr="clear"
+alias caler="clear"
+alias calar="clear"
+alias cclear="clear"
+alias rclear="clear"
+alias rlear="clear"
+alias rclear="clear"
+alias rcle="clear"
+alias rcler="clear"
+alias cls="clear"
+alias csl="clear"
+
+# other
+alias o="orb"
+alias t="tmux"
+alias df="duf"
+alias rr="ranger"
+alias gdb="gdb --quiet"
+alias cds="du -h --max-depth=1 ."
+alias www="sudo python3 -m http.server 80"
+alias tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done"
+alias fcd='z $(fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .direnv | fzf)'
+
 #alias net="sudo bash /home/alvinpix/Escritorio/PX-games/Github/Network/Network.sh"
 alias lock="betterlockscreen -l dim"
-alias img="kitty +kitten icat"
-alias cat="batcat"
-#alias ls="colorls --sd -A"
-alias ls="lsd -A -l"
 alias catn="/usr/bin/cat"
 alias clock="tty-clock -sxc -C 2"
 alias pipes="cd /home/${user}/scripts/pipes.sh && ./pipes.sh -t 9"
