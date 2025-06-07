@@ -517,6 +517,13 @@ alias colorscript="bash /home/${user}/scripts/shell-color-scripts/colorscript.sh
 bash /home/${user}/scripts/shell-color-scripts/colorscript.sh -r
 
 #
+# Zoxide
+#
+
+# init zoxide
+eval "$(zoxide init zsh)"
+
+#
 # Nix
 #
 
