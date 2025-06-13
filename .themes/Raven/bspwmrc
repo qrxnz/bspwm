@@ -46,6 +46,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Starting picom compositor.
 pgrep -x picom > /dev/null || picom &
 
+# Qemu shared clipboard
+spice-vdagent &
+
 # Starting polybar cuts.
 ${HOME}/.config/polybar/launch.sh --cuts &
 
